@@ -3,6 +3,7 @@
 const path=require("path")
 const hbs=require("hbs")
 const express=require("express")
+const port = process.env.PORT || 3000
 
 console.log(path.join(__dirname,"../public"))
 
@@ -76,7 +77,7 @@ exp.get("*",(req,res)=>{
     })
 })
 
-exp.listen(3000,()=>{
+exp.listen(port,()=>{
     console.log("Game is On!!!")
 })
 
